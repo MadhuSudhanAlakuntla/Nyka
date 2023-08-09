@@ -111,3 +111,11 @@ justify-content: space-around;
 .subNavItems:hover {
     text-decoration:underline  #FF3399 3px;
 }
+
+#carousel1{
+    display: grid;
+    width: 90%;
+    margin: 20px auto;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
