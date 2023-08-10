@@ -14,15 +14,14 @@ let swiper = new Swiper(".swiper", {
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 1,
-      spaceBetween: 40,
+      slidesPerView: 2,
+      spaceBetween: 5,
     },
     1024: {
-      slidesPerView: 2,
-      spaceBetween: 50,
+      slidesPerView: 2.25,
+      spaceBetween: 5,
     },
   },
-  // Enable debugger
   debugger: true,
 });
 
