@@ -16,7 +16,7 @@ body{
 .pinkOnHover{
     color: black;
     align-self: flex-end;
-    
+    cursor: pointer;
     text-decoration: none;
         border-bottom: 2px solid transparent;
 }
@@ -80,6 +80,8 @@ justify-content: space-around;
     justify-content: space-evenly;
     align-items: center;
     padding: 5px 2.5%;
+    column-gap: 20px;
+    row-gap: 5px;
     text-align: center;
     grid-template-columns: repeat(12,1fr);
 }
@@ -244,15 +246,21 @@ align-items: center;
         display: inline-block;
 }
 .dropdown-content{
+    text-align: left;
+    padding: 10px;
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: ghostwhite;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
 .dropdown:hover .dropdown-content{
     display: block;
+}
+.dropdown-content p:hover{
+    cursor: pointer;
+    color: #fc2779;
 }
 @media (max-width: 768px) {
 #footer1 {
@@ -263,6 +271,9 @@ align-items: center;
     .grid3Item {
             width: 97.5%;
         }
+        .dropdown-content p {
+            font-size: 12px;
+        }
 
 }
 
@@ -271,6 +282,9 @@ align-items: center;
         gap: 40px;
             flex-direction: column;
         }
+                .dropdown-content p {
+                    font-size: 14px;
+                }
     .grid3Item {
             width: 95%;
         }
