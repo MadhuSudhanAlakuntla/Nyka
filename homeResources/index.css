@@ -2,7 +2,6 @@
 body{
     font-family: 'Inter', sans-serif;
     display: flex;
-
     flex-direction: column;
 }
 
@@ -16,10 +15,15 @@ body{
 }
 .pinkOnHover{
     color: black;
+    align-self: flex-end;
+    
     text-decoration: none;
+        border-bottom: 2px solid transparent;
 }
 .pinkOnHover:hover{
     color:#fc2779;
+    text-decoration: none;
+    border-bottom: 2px solid #fc2779;
 }
 #searchContainer{
     height: 75%;
@@ -80,12 +84,11 @@ justify-content: space-around;
     grid-template-columns: repeat(12,1fr);
 }
 .subNavItems{
+    position: relative;
+        display: inline-block;
     font-size: 14px;    
     color: gray;
     cursor: pointer;
-}
-.subNavItems:hover {
-    text-decoration:underline  #FF3399 3px;
 }
 #carousel1{
     padding: 10px;
@@ -235,6 +238,21 @@ color: white;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+.dropdown{
+    position: relative;
+        display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
 }
 @media (max-width: 768px) {
 #footer1 {
