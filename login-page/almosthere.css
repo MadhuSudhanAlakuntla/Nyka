@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+.container{
+    width:350px;
+    height: 600px;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+ gap:10px;
+   border-top-left-radius: 16px;
+   border-top-right-radius: 16px;
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    
+}
+.head{
+    display: flex;
+    align-items: center;
+    
+    width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+    
+    }
+    .head > button{
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    font-style: solid;
+    }
+    .head> h3{
+        width: 100%;
+        height: 40px;
+        text-align: center; 
+        padding: 10px;
+        font-size: 18px;
+      
+    font-family: 'Roboto', sans-serif;
+        padding-top: 20px;
+        margin-top: 5px;
+    }
+.box {
+    width:320px ;
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+  
+    
+    
+}
+.box >:nth-child(1){
+    width: 100%;
+    height: 40px;
+    text-align: center; 
+    
+    font-size: 18px;
+    background-color: whitesmoke;
+}
+.box > :nth-child(2){
+    width:100% ;
+    height:280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+form >:nth-child(1){
+display: flex;
+flex-direction: column;
+gap:10px;
+}
+form >:nth-child(1) >#name{
+    width: 300px;
+    height: 40px;
+    text-align: left; 
+ border: none;
+    font-size: 18px;
+    border-bottom: 1px solid #ff1e75;
+}
+form >:nth-child(1) >#email{
+    width: 300px;
+    height: 40px;
+    text-align: left; 
+      border: none;
+    font-size: 18px;
+    border-bottom:1px solid #ff1e75 ;
+}
+
+form> #homepage{
+    width:100%;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color:#ff1e75;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+        
+}
+
+
+
+
+
+
+
+
+
+
