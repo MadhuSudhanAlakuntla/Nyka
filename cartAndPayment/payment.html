@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        /* #payment-methods{
+            background-color: rgb(190, 182, 182);
+        } */
+        #payment-methods>div {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            background-color: rgba(235, 237, 240, 0.64);
+        }
+        #payment-methods>div:hover{
+            cursor: pointer;
+        }
+        #navBar>p{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 24px;
+        }
+        .tick-icon{
+            margin-right: 50px;
+        }
+        #navBar{
+            display: flex;
+            justify-content: space-around;
+            height: 40px;
+        }
+        #style{
+            padding: 20px;
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navBar">
+        <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg" alt="Nyka" id="nyka">
+        <p><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg" alt="tick-icon" class="tick-icon" >Sign Up</p>
+        <p><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg" alt="tick-icon" class="tick-icon" >Address</p>
+        <p><img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg" alt="tick-icon" class="tick-icon" >Payment</p>
+    </div>
+    <hr>
+    <div id="style">
+        <h1 style="font-family: Inter, sans-serif;">Choose payment method</h1>
+        <p>Choose the payment method you prefer</p>
+        <h2>Payment Method Options</h2>
+    </div>
+    <hr>
+    <div style="display: flex; margin-left: 20px;">
+        <div id="payment-methods">
+            <div id="card">
+                <h3>Credit/Debit Card</h3>
+                <p>Visa, Mastercard, Rupay & more</p>
+            </div>
+            <div id="upi">
+                <h3>UPI</h3>
+                <p>Google Pay, PhonePe, Paytm & more</p>
+            </div>
+            <div id="netBanking">
+                <h3>NetBanking</h3>
+                <p>Pay through your favourite bank</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var cardMethod = document.getElementById('card');
+        var upi = document.getElementById('upi');
+        var netBanking = document.getElementById('netBanking');
+        card.addEventListener('click',function(){
+            event.preventDefault();
+            card.style.backgroundColor = 'white';
+            upi.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
+            netBanking.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
+            cardMethod()
+        })
+        upi.addEventListener('click',function(){
+            event.preventDefault();
+            upi.style.backgroundColor = 'white';
+            card.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
+            netBanking.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
+        })
+        netBanking.addEventListener('click',function(){
+            event.preventDefault();
+            netBanking.style.backgroundColor = 'white';
+            upi.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
+            card.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
+        })
+        function cardMethod(){
+            var div = document.getElementById('method');
+            
+        }
+    </script>
+</body>
+</html>

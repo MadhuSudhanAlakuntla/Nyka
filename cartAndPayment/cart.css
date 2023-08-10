@@ -1,0 +1,53 @@
+#cart-container{
+    width: 400px;
+    height: 100%;
+    border: solid whitesmoke;
+    float: right;
+    overflow: scroll;
+}
+#items>.item,#tp{
+    border: 1px solid  rgb(241, 241, 225);
+    display: flex;
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    height: fit-content;
+}
+#items > .item  h3{
+    margin-top: 0px;
+}
+.item>div{
+    margin-left: 10px;
+}
+h6,p,span{
+    margin-top: 0px;
+    padding: 0px;
+}
+div h6{
+    display: inline;
+}
+h6+button{
+    margin: 10px;
+}
+#tp > button{
+    width: 40%;
+    height: 90%;
+    float: right;
+    /* margin: 5px; */
+    background-color: rgb(232, 0, 113);
+    border-color: rgb(232, 0, 113);
+    text-decoration-color: white;
+    border-radius: 6px;
+}
+#tp > h2{
+    margin: auto;
+    margin-left: 0px;
+}
+#tp{
+    justify-content: space-between;
+    height: 50px;
+    padding: 5px;
+    border-color: white;
+    position: static;
+}

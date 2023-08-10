@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Page</title>
+    <style>
+        div{
+            width: 400px;
+            border: 2px solid black;
+            margin: auto;
+            border-radius: 5px;
+            float: right;
+        }
+        div > input,button{
+            display: block;
+            width: 90%;
+            margin: auto;
+            height: 50px;
+            background-color: rgb(243, 244, 245);
+            border-radius: 5px;
+            margin-top: 20px;
+            border-color: rgb(243, 244, 245);
+            margin-bottom: 20px;
+        }
+        button{
+            background-color: rgb(232, 0, 113);
+            border-color: rgb(232, 0, 113);
+            text-decoration-color: white;
+        }
+        div > h2,p{
+            margin-left: 20px;
+            margin-bottom: 0px;
+        }
+        #street{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>New Address</h2> <hr>
+        <h2>Address</h2>
+        <input type="number" id="pincode" placeholder="Pincode" required>
+        <input type="text" id="hno" placeholder="House/ Flat/ Office No.">
+        <input type="text" id="street" placeholder="Road Name/ Area /Colony">
+        <h2>Contact</h2>
+        <p>Information provided here will be used to contact you for delivery updates</p>
+        <input type="text"  id="name" placeholder="Name" required>
+        <input type="number"  id="number" placeholder="Phone" required>
+        <input type="email"  id="email" placeholder="Email ID (Optional)">
+        <button>Ship to this address</button>
+    </div>
+</body>
+<script>
+    var address = JSON.parse(localStorage.getItem('address'))||[];
+    var btn = document.querySelector('button');
+    btn.addEventListener('click',function(){
+        event.preventDefault();
+        var obj = {
+            pincode : document.getElementById('pincode').value,
+            hno : document.getElementById('hno').value,
+            street : document.getElementById('street').value,
+            name : document.getElementById('name').value,
+            number : document.getElementById('number').value,
+            email : document.getElementById('email').value,
+        }
+        address.push(obj);
+        localStorage.setItem('address',JSON.stringify(address));
+    })
+</script>
+</html>
