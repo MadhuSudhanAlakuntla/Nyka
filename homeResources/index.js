@@ -13,13 +13,48 @@ let swiper = new Swiper(".swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 5,
+    700: {
+      slidesPerView: 1.1,
+      spaceBetween: 20,
     },
-    1024: {
-      slidesPerView: 2.25,
-      spaceBetween: 5,
+    750: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+    },
+    800: {
+      slidesPerView: 1.3,
+      spaceBetween: 20,
+    },
+
+    850: {
+      slidesPerView: 1.4,
+      spaceBetween: 20,
+    },
+    900: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    950: {
+      slidesPerView: 1.6,
+      spaceBetween: 20,
+    },
+    1000: {
+      slidesPerView: 1.7,
+      spaceBetween: 20,
+    },
+
+    1050: {
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+    },
+
+    1100: {
+      slidesPerView: 1.9,
+      spaceBetween: 20,
+    },
+    1150: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
   },
   debugger: true,
