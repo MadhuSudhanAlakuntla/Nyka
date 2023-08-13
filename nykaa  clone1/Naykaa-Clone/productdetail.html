@@ -387,6 +387,10 @@
         </div>
     </header>
       <style data-emotion-css="1rruyoa">
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    font-family: 'Inter', sans-serif !important;
+}
         .css-1rruyoa {
           max-width: 1200px !important;
           width: 90%;
@@ -591,7 +595,7 @@
                       }
                     </style>
                     <div class="css-1tasg9f">
-                      <img
+                      <img id="productImg"
                         alt="product-thumbnail"
                         src="images/e-beardo-hair-growth-oil.jpg"
                       />
@@ -775,7 +779,7 @@
                     }
                   }
                 </style>
-                <h1 class="css-1gc4x7i">Beardo Hair Growth Oil</h1>
+                <h1 class="css-1gc4x7i" id="name">Beardo Hair Growth Oil</h1>
                 <style data-emotion-css="173satf">
                   .css-173satf {
                     padding: 0.5rem 0;
@@ -1171,7 +1175,7 @@
                       font-weight: 500;
                       line-height: 24px;
                     }</style
-                  ><span class="css-12x6n3h">&#8377;585</span
+                  ><span class="css-12x6n3h" id="price">&#8377;585</span
                   ><style data-emotion-css="66piml">
                     .css-66piml {
                       color: #fc2779;
@@ -1340,7 +1344,7 @@
                         .css-17hv1os path:nth-of-type(2) {
                           fill: #ffffff;
                         }</style
-                      ><button type="button" class="css-17hv1os">
+                      ><button type="button" id="add2Bag" class="css-17hv1os">
                         <span class="btn-text">ADD TO BAG</span>
                       </button>
                     </div>
@@ -2942,9 +2946,18 @@ YmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII="
      
     </div>
     <div id="portal-root"></div>
-    
-    
-   
-    
   </body>
+  <script>
+
+document.getElementById('add2Bag').addEventListener('click',()=>{
+  let cart = JSON.parse(localStorage.getItem('cart-products')) || []
+  cart.push({
+    img: 'images\e-beardo-hair-growth-oil.jpg',
+    name: document.getElementById('name').innerText,
+    qty: 1,
+    price: document.getElementById('price').innerText
+  })
+  localStorage.setItem('cart-products',JSON.stringify(cart))
+})
+  </script>
 </html>
