@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+       body{
+            width: 300px;
+            border: solid whitesmoke;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            /* float: right; */
+            text-align: center;
+            margin-top: 200px;
+            padding: 10px;
+        }
+        label,input,button{
+            margin: 10px;
+        }
+        input{
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button{
+            width: 60%;
+            height: 30px;
+            /* float: right; */
+            /* margin: 5px; */
+            background-color: rgb(232, 0, 113);
+            border-color: rgb(232, 0, 113);
+            color: white;
+            border-radius: 6px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div> -->
+        <label for="input">Please Enter the OTP</label> <br>
+        <input type="number" placeholder="Enter here"><br>
+        <button>Submit</button>
+    <!-- </div> -->
+</body>
+<script>
+    var btn = document.querySelector('button');
+    btn.addEventListener('click',function(){
+        if(document.querySelector('input').value=="1234")
+        window.location.href = './done.html';
+        else alert('OTP didn\'t match')
+    })
+</script>
+</html>
