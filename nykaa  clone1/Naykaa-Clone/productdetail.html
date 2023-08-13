@@ -2946,16 +2946,17 @@ YmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII="
      
     </div>
     <div id="portal-root"></div>
+    
   </body>
   <script>
 
 document.getElementById('add2Bag').addEventListener('click',()=>{
   let cart = JSON.parse(localStorage.getItem('cart-products')) || []
   cart.push({
-    img: 'images\e-beardo-hair-growth-oil.jpg',
-    name: document.getElementById('name').innerText,
+    img: '../nykaa  clone1/Naykaa-Clone/images/e-beardo-hair-growth-oil.jpg',
+    name: 'Beardo Hair Growth Oil',
     qty: 1,
-    price: document.getElementById('price').innerText
+    price: 585
   })
   localStorage.setItem('cart-products',JSON.stringify(cart))
 })
