@@ -26,6 +26,7 @@ var products = [
     
 ]
 // console.log(products);
+var pds = JSON.parse(localStorage.getItem('cart-products'))||[];
 var items = document.getElementById('items')
 function display(products){
     items.innerHTML = "";
@@ -43,7 +44,7 @@ function display(products){
         btn.addEventListener('click',function(event){
             event.preventDefault();
             products.splice(index,1);
-            // localStorage.setItem('cart-products',JSON.stringify(products));
+            localStorage.setItem('cart-products',JSON.stringify(products));
             display(products)
         })
         img.src = products[index].img;

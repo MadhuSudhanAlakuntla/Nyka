@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Page</title>
     <style>
-        /* #payment-methods{
-            background-color: rgb(190, 182, 182);
-        } */
+       *{
+            font-family: sans-serif;
+        }
         #payment-methods>div {
             background-color: white;
             padding: 20px;
@@ -32,11 +32,39 @@
             display: flex;
             justify-content: space-around;
             height: 40px;
+            /* width: 120%; */
         }
         #style{
-            padding: 20px;
-            padding-bottom: 0px;
+            margin-left: 18%;
         }
+        #card-container{
+            display: flex;;
+            /* width: fit-content; */
+            justify-content: space-around;
+            /* background-color: aqua; */
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        #selected-method{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            >button{
+                height: 50px;
+                background-color: rgb(232, 0, 113);
+                border-color: rgb(232, 0, 113);
+                color: antiquewhite;
+                border-radius: 5px;
+                
+            }
+            >input{
+                height: 50px;
+                border-radius: 5PX;
+            }
+        }
+        button:hover{
+                cursor: pointer;
+            }
+        
     </style>
 </head>
 <body>
@@ -48,14 +76,14 @@
     </div>
     <hr>
     <div id="style">
-        <h1 style="font-family: Inter, sans-serif;">Choose payment method</h1>
+        <h1 style="font-family: Inter, sans-serif;font-size:36px;">Choose Payment Method</h1>
         <p>Choose the payment method you prefer</p>
         <h2>Payment Method Options</h2>
     </div>
     <hr>
-    <div style="display: flex; margin-left: 20px;">
+    <div id="card-container" style="display: flex; margin-left: 20px; width: 80%; margin: auto;">
         <div id="payment-methods">
-            <div id="card">
+            <div id="card" style="background-color: white;">
                 <h3>Credit/Debit Card</h3>
                 <p>Visa, Mastercard, Rupay & more</p>
             </div>
@@ -67,6 +95,21 @@
                 <h3>NetBanking</h3>
                 <p>Pay through your favourite bank</p>
             </div>
+        </div>
+        <div id="selected-method">
+            <h2 style="margin-bottom: 0px;">One card for all Nykaa apps</h2>
+            <div style="margin: 0px auto; padding-right: 6px;">
+                <span style="margin: auto;">We accept</span>
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/VISA.svg" alt="">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/mastercard.svg" alt="">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/Rupay.svg" alt="">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/AMEX.svg" alt="">
+            </div>
+            <hr style="width: 300px;">
+            <input type="number"id="card-no" placeholder="Card Number"><br>
+            <input type="text"  id="date" placeholder="Expiry (MM/YY)"><br>
+            <input type="number" id="cvv" placeholder="CVV"><br>
+            <button>Pay ₹ <span>0</span></button>
         </div>
     </div>
     <script>
@@ -92,10 +135,18 @@
             upi.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
             card.style.backgroundColor = 'rgba(235, 237, 240, 0.64)';
         })
-        function cardMethod(){
-            var div = document.getElementById('method');
-            
+        var arr = JSON.parse(localStorage.getItem('cart-products'))
+        document.querySelector('button>span').textContent = total(arr)
+        function total(arr){
+            return arr.reduce(function(acc,element,index){
+                return acc+ + +arr[index].price;
+            },0)
         }
+        document.querySelector('button').addEventListener('click',function(){
+            alert('Your OTP is  1 2 3 4');
+            window.location.href = './otp.html';
+
+        })
     </script>
 </body>
 </html>

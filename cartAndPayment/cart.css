@@ -1,12 +1,22 @@
+*{
+    font-family: sans-serif;
+}
+img{
+    border-radius: 5px;
+}
 #cart-container{
     width: 400px;
     height: 100%;
     border: solid whitesmoke;
-    float: right;
-    overflow: scroll;
+    /* float: right; */
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover{
+    cursor: pointer;
 }
 #items>.item,#tp{
-    border: 1px solid  rgb(241, 241, 225);
+    border: 2px solid  rgb(212, 212, 194);
     display: flex;
     width: 90%;
     border-radius: 10px;

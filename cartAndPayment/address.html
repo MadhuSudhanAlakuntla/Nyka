@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Page</title>
     <style>
+        *{
+            font-family: sans-serif;
+        }
         div{
             width: 400px;
-            border: 2px solid black;
+            border: solid whitesmoke;
             margin: auto;
             border-radius: 5px;
-            float: right;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            /* float: right; */
         }
         div > input,button{
             display: block;
@@ -27,6 +31,9 @@
             background-color: rgb(232, 0, 113);
             border-color: rgb(232, 0, 113);
             text-decoration-color: white;
+        }
+        button:hover{
+            cursor: pointer;
         }
         div > h2,p{
             margin-left: 20px;
@@ -67,6 +74,11 @@
         }
         address.push(obj);
         localStorage.setItem('address',JSON.stringify(address));
+    })
+    var nxtPage = document.querySelector('button');
+    // console.log(nxtPage)
+    nxtPage.addEventListener('click',function(event){
+        window.location.href='./payment.html';
     })
 </script>
 </html>
