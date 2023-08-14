@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+.container{
+    width:350px;
+    height: 600px;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+ gap:10px;
+   border-top-left-radius: 16px;
+   border-top-right-radius: 16px;
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    
+}
+.head{
+    display: flex;
+   justify-content:centre;
+    
+    width: 95%;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+    
+    }
+    .head > button{
+        font-size: 20px;
+        border: none;
+        background-color: white;
+        font-style: solid;
+        float: left;
+        }
+        .head> h3{
+            width: 100%;
+            height: 40px;
+            text-align: center; 
+            padding: 10px;
+            font-size: 18px;
+          margin-top: 5px;
+        
+        }
+
+        .box {
+            width:95%;
+            height:250px;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            gap:20px
+            
+        }
+        .userId-again{
+            background-color: whitesmoke;
+            color: black;
+            border: 1px solid #ff1e75;
+            width: 90%;
+            height: 40px;
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           justify-content: center;
+        }
+
+        
+
+        .para{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+        #otpagain{
+            width:100%;
+        height: 40px;
+            border: none;
+            border-bottom: 1px solid #ff1e75;
+
+            
+        }
+
+        #verify-again{
+            width:100%;
+            height: 40px;
+            border: none;
+            color: white;
+            background-color:#ff1e75;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                width:90%;
+                gap:40px;
+            }
