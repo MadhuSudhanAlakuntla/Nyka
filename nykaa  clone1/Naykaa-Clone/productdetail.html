@@ -368,14 +368,14 @@
                             <span class="css-wevzy7 euw1lbv4">Account</span>
                         </div>
                         <div class="css-0 e1ewpqpu1">
-                            <button type="button" class="css-5s18zx eoh7kvv0">
+                            <a href="../../cartAndPayment/cart.html" class="css-5s18zx eoh7kvv0">
                                 <svg width="24" height="24" viewbox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M20.5 7.2H16.2V6.9C16.3 4.5 14.4 2.5 12 2.5C9.6 2.6 7.8 4.5 7.8 6.9V7.2H3.5C2.9 7.2 2.5 7.6 2.5 8.2V16.4C2.5 19.2 4.7 21.4 7.5 21.4H16.5C19.3 21.4 21.5 19.2 21.5 16.4V8.2C21.5 7.7 21.1 7.2 20.5 7.2ZM9.3 6.9C9.3 5.4 10.5 4.1 12 4C13.5 4.1 14.7 5.4 14.7 6.9V7.2H9.3V6.9ZM20 16.5C20 18.4 18.4 20 16.5 20H7.5C5.6 20 4 18.4 4 16.5V8.7H7.8V10.7C7.6 10.9 7.5 11.2 7.5 11.4C7.5 12 8 12.4 8.5 12.4C9 12.4 9.5 11.9 9.5 11.4C9.5 11.1 9.4 10.9 9.2 10.7V8.7H14.6V10.6C14.4 10.8 14.3 11.1 14.3 11.4C14.3 12 14.7 12.5 15.3 12.5C15.9 12.5 16.4 12.1 16.4 11.5C16.4 11.2 16.3 11 16.1 10.8V8.8H20V16.5Z"
                                         fill="black"></path>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -387,6 +387,10 @@
         </div>
     </header>
       <style data-emotion-css="1rruyoa">
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    font-family: 'Inter', sans-serif !important;
+}
         .css-1rruyoa {
           max-width: 1200px !important;
           width: 90%;
@@ -591,7 +595,7 @@
                       }
                     </style>
                     <div class="css-1tasg9f">
-                      <img
+                      <img id="productImg"
                         alt="product-thumbnail"
                         src="images/e-beardo-hair-growth-oil.jpg"
                       />
@@ -775,7 +779,7 @@
                     }
                   }
                 </style>
-                <h1 class="css-1gc4x7i">Beardo Hair Growth Oil</h1>
+                <h1 class="css-1gc4x7i" id="name">Beardo Hair Growth Oil</h1>
                 <style data-emotion-css="173satf">
                   .css-173satf {
                     padding: 0.5rem 0;
@@ -1171,7 +1175,7 @@
                       font-weight: 500;
                       line-height: 24px;
                     }</style
-                  ><span class="css-12x6n3h">&#8377;585</span
+                  ><span class="css-12x6n3h" id="price">&#8377;585</span
                   ><style data-emotion-css="66piml">
                     .css-66piml {
                       color: #fc2779;
@@ -1340,7 +1344,7 @@
                         .css-17hv1os path:nth-of-type(2) {
                           fill: #ffffff;
                         }</style
-                      ><button type="button" class="css-17hv1os">
+                      ><button type="button" id="add2Bag" class="css-17hv1os">
                         <span class="btn-text">ADD TO BAG</span>
                       </button>
                     </div>
@@ -2943,8 +2947,18 @@ YmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII="
     </div>
     <div id="portal-root"></div>
     
-    
-   
-    
   </body>
+  <script>
+
+document.getElementById('add2Bag').addEventListener('click',()=>{
+  let cart = JSON.parse(localStorage.getItem('cart-products')) || []
+  cart.push({
+    img: '../nykaa  clone1/Naykaa-Clone/images/e-beardo-hair-growth-oil.jpg',
+    name: 'Beardo Hair Growth Oil',
+    qty: 1,
+    price: 585
+  })
+  localStorage.setItem('cart-products',JSON.stringify(cart))
+})
+  </script>
 </html>
