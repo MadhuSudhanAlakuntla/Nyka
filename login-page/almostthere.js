@@ -8,10 +8,13 @@ form.addEventListener("submit", function(event) {
         email:event.target.email.value
     };
 userData.map((elem)=>{
+    // console.log(elem.name===data.name,elem.email===data.email)
   if(data.name==elem.name && data.email==elem.email)
     window.location.assign('login.html')
-})
+  else{
     userData.push(data);
     localStorage.setItem("user-data", JSON.stringify(userData));
     window.location.assign('register.html')
+}
+})
 });
