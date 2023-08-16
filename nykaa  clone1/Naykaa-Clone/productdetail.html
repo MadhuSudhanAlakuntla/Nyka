@@ -1340,7 +1340,7 @@
                         .css-17hv1os path:nth-of-type(2) {
                           fill: #ffffff;
                         }</style
-                      ><button type="button" class="css-17hv1os">
+                      ><button id="add2Bag" type="button" class="css-17hv1os">
                         <span class="btn-text">ADD TO BAG</span>
                       </button>
                     </div>
@@ -2904,4 +2904,17 @@ YmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII="
    
     
   </body>
+  <script>
+
+    document.getElementById('add2Bag').addEventListener('click', () => {
+      let cart = JSON.parse(localStorage.getItem('cart-products')) || []
+      cart.push({
+        img: '../nykaa  clone1/Naykaa-Clone/images/e-beardo-hair-growth-oil.jpg',
+        name: 'Beardo Hair Growth Oil',
+        qty: 1,
+        price: 585
+      })
+      localStorage.setItem('cart-products', JSON.stringify(cart))
+    })
+  </script>
 </html>

@@ -1,19 +1,19 @@
 
-var pds = JSON.parse(localStorage.getItem('cart-products'))||[];
-var items = document.getElementById('items')
+let pds = JSON.parse(localStorage.getItem('cart-products'))||[];
+let items = document.getElementById('items')
 function display(products){
     items.innerHTML = "";
     document.getElementById('tp').style.display = 'block'
     document.getElementById('total-items').innerText = products.length;
     products.forEach(function(element,index){
-        var item = document.createElement('div'); 
+        let item = document.createElement('div'); 
         item.className = 'item';
-        var div = document.createElement('div'); 
-        var img = document.createElement('img');
-        var name = document.createElement('p');
-        var qty = document.createElement('p');
-        var price = document.createElement('h6');
-        var btn = document.createElement('button');
+        let div = document.createElement('div'); 
+        let img = document.createElement('img');
+        let name = document.createElement('p');
+        let qty = document.createElement('p');
+        let price = document.createElement('h6');
+        let btn = document.createElement('button');
         btn.textContent = 'Remove';
         btn.addEventListener('click',function(event){
             event.preventDefault();
@@ -50,7 +50,7 @@ res+=(parseInt(el.price) * parseInt(el.qty));
 
 // console.log(total(products));
 //redirecting to address page
-var nxtPage = document.querySelector('#tp>button');
+let nxtPage = document.querySelector('#tp>button');
 // console.log(nxtPage)
 nxtPage.addEventListener('click',function(event){
     window.location.href='./address.html';
