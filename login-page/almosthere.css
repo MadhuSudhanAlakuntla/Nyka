@@ -1,27 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-* {
-    font-family: 'Inter', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
 }
 .container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width:60vw;
-    height: 80vh;
+    width:350px;
+    height: 600px;
     display: flex;
    flex-direction: column;
    align-items: center;
  gap:10px;
+   border-top-left-radius: 16px;
+   border-top-right-radius: 16px;
    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     
 }
 .head{
     display: flex;
-    align-items: center;   
+    align-items: center;
+    
     width: 95%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
     

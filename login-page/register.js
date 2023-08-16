@@ -1,6 +1,6 @@
 var userData2 = JSON.parse(localStorage.getItem("user-data")) || [];
 
-
+alert("your otp is 1234");
 
 
 var form1 = document.querySelector("form");
