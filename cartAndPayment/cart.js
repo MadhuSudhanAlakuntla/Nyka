@@ -3,7 +3,7 @@ let pds = JSON.parse(localStorage.getItem('cart-products'))||[];
 let items = document.getElementById('items')
 function display(products){
     items.innerHTML = "";
-    document.getElementById('tp').style.display = 'block'
+    document.getElementById('tp').style.display = 'flex'
     document.getElementById('total-items').innerText = products.length;
     products.forEach(function(element,index){
         let item = document.createElement('div'); 

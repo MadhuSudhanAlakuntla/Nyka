@@ -9,11 +9,11 @@ img{
 #cart-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    min-height: max-content;
+    width: 75vw;
     padding: 25px;
-    min-width: 90vw;
-    min-height: 85vh;
     border: solid whitesmoke;
     border-radius: 10px;
     margin: auto;
@@ -31,22 +31,34 @@ button:hover{
     color: white;
 }
 #items{
-    width: 90%;
+    display: grid;
+grid-template-columns: repeat(3,1fr);
 }
 #items>.item,#tp{
     border: 2px solid  rgb(212, 212, 194);
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 90%;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 10px;
     height: fit-content;
 }
+#tp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 #items > .item  h3{
     margin-top: 0px;
 }
 .item>div{
     margin-left: 10px;
+}
+.item{
+    padding: 10px;
 }
 h6,p,span{
     margin-top: 0px;
@@ -61,8 +73,7 @@ h6+button{
 #tp > button{
     width: 40%;
     height: 90%;
-    float: right;
-    /* margin: 5px; */
+    padding: 10px;
     background-color: rgb(232, 0, 113);
     border-color: rgb(232, 0, 113);
     text-decoration-color: white;
@@ -78,4 +89,15 @@ h6+button{
     padding: 5px;
     border-color: white;
     position: static;
+}
+
+@media screen and (max-width:1000px) {
+#items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:800px) {
+    #items {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
