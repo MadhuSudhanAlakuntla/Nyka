@@ -5,33 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTP</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+font-family: 'Inter', sans-serif;
+}
        body{
-            width: 300px;
-            border: solid whitesmoke;
-            margin: auto;
+            width: 50vw;
+            height: 50vh;
+                max-width: 90vw;
+position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             /* float: right; */
             text-align: center;
-            margin-top: 200px;
             padding: 10px;
         }
         label,input,button{
             margin: 10px;
         }
         input{
+            width: 40%;
             padding: 10px;
             border-radius: 5px;
+                        border: none;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         }
         button{
-            width: 60%;
-            height: 30px;
-            /* float: right; */
-            /* margin: 5px; */
+            width: 40%;
+            padding: 10px;
             background-color: rgb(232, 0, 113);
-            border-color: rgb(232, 0, 113);
+            border: none;
             color: white;
-            border-radius: 6px;
+            border-radius: 5px;
         }
         button:hover{
             cursor: pointer;

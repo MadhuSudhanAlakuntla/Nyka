@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Page</title>
     <style>
-        *{
-            font-family: sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+font-family: 'Inter', sans-serif;
+}
         div{
-            width: 400px;
-            border: solid whitesmoke;
+            width: 80vw;
+            text-align: center;
+            border: 1px solid whitesmoke;
             margin: auto;
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            /* float: right; */
         }
         div > input,button{
             display: block;
             width: 90%;
             margin: auto;
             height: 50px;
+            padding: 10px 5px;
             background-color: rgb(243, 244, 245);
             border-radius: 5px;
             margin-top: 20px;
@@ -29,11 +31,9 @@
         }
         button{
             background-color: rgb(232, 0, 113);
-            border-color: rgb(232, 0, 113);
-            text-decoration-color: white;
-        }
-        button:hover{
-            cursor: pointer;
+            color: white;
+            border: 0;
+cursor: pointer;
         }
         div > h2,p{
             margin-left: 20px;
@@ -41,6 +41,16 @@
         }
         #street{
             height: 100px;
+        }
+        @media screen and(max-width:1000px) {
+            div{
+                width: 90vw;
+            }
+        }
+                @media screen and(max-width:800px) {
+            div{
+                width: 95vw;
+            }
         }
     </style>
 </head>

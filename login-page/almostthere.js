@@ -1,19 +1,17 @@
-var userData3 = JSON.parse(localStorage.getItem("user-data")) || [];
-var form = document.querySelector("form");
+let userData = JSON.parse(localStorage.getItem("user-data")) || [];
+let form = document.querySelector("form");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-    console.log(event);
-   
-    var formObj = {
+    
+    let data = {
         name: event.target.name.value,
         email:event.target.email.value
     };
-
-    
-        userData3.push(formObj);
-        localStorage.setItem("user-data", JSON.stringify(userData3));
-        window.location.assign("login.html");
-       
-        
-   
+userData.map((elem)=>{
+  if(data.name==elem.name && data.email==elem.email)
+    window.location.assign('login.html')
+})
+    userData.push(data);
+    localStorage.setItem("user-data", JSON.stringify(userData));
+    window.location.assign('register.html')
 });
