@@ -1,12 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-font-family: 'Inter', sans-serif;
-text-align: center;
-}
-img{
-    border-radius: 5px;
-}
 #cart-container{
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -33,9 +26,17 @@ button:hover{
 #items{
     display: grid;
 grid-template-columns: repeat(3,1fr);
+=======
+    margin: auto;
+    width: 400px;
+    height: 100%;
+    border: solid whitesmoke;
+    float: right;
+    overflow: scroll;
+>>>>>>> cbd2d317f70bf6b965df1f48712720d4789c4ed1
 }
 #items>.item,#tp{
-    border: 2px solid  rgb(212, 212, 194);
+    border: 1px solid  rgb(241, 241, 225);
     display: flex;
     justify-content: center;
     align-items: center;
