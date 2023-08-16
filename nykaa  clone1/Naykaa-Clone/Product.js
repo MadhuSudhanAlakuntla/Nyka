@@ -1,6 +1,6 @@
 //appendDATA-------------------------------------------------------
 
-var data = [
+let data = [
     { item:1,
       trend:"FEATURED",
       product_name:"Beardo Hair Growth Oil",
@@ -625,7 +625,7 @@ let newdata= [
     
   ];
 
-var indexvalue=1;
+let indexvalue=1;
     showimg(indexvalue);
 
     function btn_slide(e){showimg(indexvalue = e);}
@@ -633,7 +633,7 @@ var indexvalue=1;
     function side_slide(e){showimg(indexvalue += e);}
     
     function showimg(e){
-        var i;
+        let i;
         const img= document.querySelectorAll(".images img");
 
         const sliders = document.querySelectorAll(".btn-sliders span");
@@ -660,10 +660,10 @@ var indexvalue=1;
 
    localStorage.setItem("nykaa",JSON.stringify(data));
 
-   var prod=JSON.parse(localStorage.getItem("nykaa"));
+   let prod=JSON.parse(localStorage.getItem("nykaa"));
 
-  var right = document.getElementById("container_right");
-  var mainDiv = document.createElement("div");
+  let right = document.getElementById("container_right");
+  let mainDiv = document.createElement("div");
   mainDiv.setAttribute("id", "containermain");
   right.append(mainDiv);
  
@@ -931,10 +931,10 @@ let showProducts = (product) => {
     document.getElementById("containermain").innerHTML="";
  product.map((item) => {
      
-    var imageDiv = document.createElement("div");
+    let imageDiv = document.createElement("div");
     imageDiv.setAttribute("id","heart");
 
-    var trendiv = document.createElement("div");
+    let trendiv = document.createElement("div");
     trendiv.setAttribute("id", "trendiv");
     trendiv.addEventListener("click",function(){
         addCart(item);
@@ -951,52 +951,52 @@ let showProducts = (product) => {
         trendiv.style.color="#fea838";
     }
 
-    var button = document.createElement("div");
+    let button = document.createElement("div");
     button.setAttribute("id", "button");
     button.addEventListener("click",function(){
         addCart(item);
     });
 
-    var imgappend = document.createElement("img");
+    let imgappend = document.createElement("img");
     imgappend.setAttribute("src", item.image_url);
     imgappend.setAttribute("id", "imgappend");
 
-    var p1 = document.createElement("p");
+    let p1 = document.createElement("p");
     p1.setAttribute("id","name")
     p1.textContent = item.product_name;
 
-    var spanMRP=document.createElement("span");
+    let spanMRP=document.createElement("span");
     spanMRP.textContent="MRP:-";
     spanMRP.setAttribute("id","spanMRP");
 
-    var span1 = document.createElement("span");
+    let span1 = document.createElement("span");
     span1.textContent =item.MRPcut;
     span1.setAttribute("id","span1")
 
-    var span2 = document.createElement("span");
+    let span2 = document.createElement("span");
     span2.textContent =" "+item.MRP;
     span2.setAttribute("id","span2")
 
-    var span3 = document.createElement("span");
+    let span3 = document.createElement("span");
     span3.textContent = "  "+item.discount;
     span3.setAttribute("id","span3")
 
-    var spandiv=document.createElement("div");
+    let spandiv=document.createElement("div");
     spandiv.setAttribute("id","spandiv")
 
-    var span4 = document.createElement("div");
+    let span4 = document.createElement("div");
     span4.style.display="inline-block";
     span4.setAttribute("id","span4")
    
-    var img1 = document.createElement("img");
+    let img1 = document.createElement("img");
     img1.setAttribute("src", item.image_urls);
     
-    var span5 = document.createElement("div");
+    let span5 = document.createElement("div");
     span5.textContent = item.total;
     span5.style.display="inline-block";
     span5.setAttribute("id","span5")
 
-    var heartdiv=document.createElement("div")
+    let heartdiv=document.createElement("div")
     heartdiv.style.width="270px";
     heartdiv.style.height="50px";
     heartdiv.style.margin="auto";
@@ -1007,14 +1007,14 @@ let showProducts = (product) => {
       console.log("yeahhh")
       // document.getElementById('simple').click();
            openmodelbutt.forEach(button => {
-            var model=document.querySelector(button.dataset.modelTarget)
+            let model=document.querySelector(button.dataset.modelTarget)
             openModel(model);
           
     });
     
     })
    
-    var heartimg=document.createElement("img");
+    let heartimg=document.createElement("img");
     heartimg.setAttribute("src", item.image_urlheart);
     heartimg.setAttribute("class","image_overlay")
  
@@ -1092,12 +1092,12 @@ $('#btn13').click(function(){
    $('#btn13 span').toggleClass("rotate");
 });
 
-var btn1 = document.getElementById('btn1')
-    var add1 = document.getElementById('add1')
-    var count1 = 0
+let btn1 = document.getElementById('btn1')
+    let add1 = document.getElementById('add1')
+    let count1 = 0
 
     function create1() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<br><div class="common"> Popularity<input type="checkbox" checked></div>
                                <div class="common"> Discount <input type="checkbox" onclick="discount(prod)"></div>
                                <div class="common"> Name<input type="checkbox" onclick="namesort(prod)"></div>
@@ -1120,12 +1120,12 @@ var btn1 = document.getElementById('btn1')
     }
     btn1.addEventListener('click', create1)
 
-    var btn2 = document.getElementById('btn2')
-    var add2 = document.getElementById('add2')
-    var count2 = 0
+    let btn2 = document.getElementById('btn2')
+    let add2 = document.getElementById('add2')
+    let count2 = 0
 
     function create2() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div> Men's Store <span class="fas fa-chevron-down"></span></div>
                         <div>Fragrance <span class="fas fa-chevron-down"></span></div>
                         <div> Personal Care <span class="fas fa-chevron-down"></span></div>
@@ -1147,12 +1147,12 @@ var btn1 = document.getElementById('btn1')
     }
     btn2.addEventListener('click', create2)
 
-    var btn3 = document.getElementById('btn3')
-    var add3 = document.getElementById('add3')
-    var count3 = 0
+    let btn3 = document.getElementById('btn3')
+    let add3 = document.getElementById('add3')
+    let count3 = 0
 
     function create3() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div ><input type="search" id="inputsearch" placeholder="Search"></div>
         <div class="common">Denver  62    <input type="checkbox"> </div>
         <div class="common">MCaffenie 58    <input type="checkbox"> </div>
@@ -1189,12 +1189,12 @@ var btn1 = document.getElementById('btn1')
     }
     btn3.addEventListener('click', create3)
 
-    var btn4 = document.getElementById('btn4')
-    var add4 = document.getElementById('add4')
-    var count4 = 0
+    let btn4 = document.getElementById('btn4')
+    let add4 = document.getElementById('add4')
+    let count4 = 0
 
     function create4() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div class="common"> Rs.0 Rs. 499  (972)<input type="checkbox" onclick="below500(prod)" > </div>
         <div class="common">Rs.500 Rs.999  (377) <input type="checkbox" onclick="below500to999(prod)" ></div>
         <div class="common"> Rs.1000 Rs.1900   (281)<input type="checkbox"onclick="below1000to1900(prod)"  ></div>
@@ -1214,12 +1214,12 @@ var btn1 = document.getElementById('btn1')
     }
     btn4.addEventListener('click', create4)
 
-    var btn5 = document.getElementById('btn5')
-    var add5 = document.getElementById('add5')
-    var count5 = 0
+    let btn5 = document.getElementById('btn5')
+    let add5 = document.getElementById('add5')
+    let count5 = 0
 
     function create5() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div class="common">70% And Above 1<input type="checkbox"></div>
         <div class="common">60% and Above 13<input type="checkbox"></div>
         <div class="common">50% and Above 67<input type="checkbox"></div>
@@ -1244,12 +1244,12 @@ var btn1 = document.getElementById('btn1')
     btn5.addEventListener('click', create5)
 
 
-    var btn6 = document.getElementById('btn6')
-    var add6 = document.getElementById('add6')
-    var count6 = 0
+    let btn6 = document.getElementById('btn6')
+    let add6 = document.getElementById('add6')
+    let count6 = 0
 
     function create6() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div class="common">4 Stars & Above  1554<input type="checkbox"></div>
         <div class="common">3 Stars & Above  1816<input type="checkbox"></div>
         <div class="common">2 Stars & Above  1850<input type="checkbox"></div>
@@ -1269,12 +1269,12 @@ var btn1 = document.getElementById('btn1')
     btn6.addEventListener('click', create6)
 
 
-    var btn7 = document.getElementById('btn7')
-    var add7 = document.getElementById('add7')
-    var count7 = 0
+    let btn7 = document.getElementById('btn7')
+    let add7 = document.getElementById('add7')
+    let count7 = 0
 
     function create7() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div class="common">Work 829 <input type="checkbox"></div>
         <div class="common">Casual 823 <input type="checkbox"></div>
         <div class="common">Party 628 <input type="checkbox"></div>
@@ -1298,12 +1298,12 @@ var btn1 = document.getElementById('btn1')
     }
     btn7.addEventListener('click', create7)
 
-    var btn8 = document.getElementById('btn8')
-    var add8 = document.getElementById('add8')
-    var count8 = 0
+    let btn8 = document.getElementById('btn8')
+    let add8 = document.getElementById('add8')
+    let count8 = 0
 
     function create8() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `
 
         <div class="common">Male 1931 <input type="checkbox"></div>
@@ -1325,12 +1325,12 @@ var btn1 = document.getElementById('btn1')
     }
     btn8.addEventListener('click', create8)
 
-    var btn9 = document.getElementById('btn9')
-    var add9 = document.getElementById('add9')
-    var count9 = 0
+    let btn9 = document.getElementById('btn9')
+    let add9 = document.getElementById('add9')
+    let count9 = 0
 
     function create9() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div > <input type="search" id="inputsearch" placeholder="Search"></div>
         <div class="common">Natural 823 <input type="checkbox"></div>
         <div class="common">Paraben0-Free 628 <input type="checkbox"></div>
@@ -1355,12 +1355,12 @@ var btn1 = document.getElementById('btn1')
     btn9.addEventListener('click', create9)
 
 
-    var btn10 = document.getElementById('btn10')
-    var add10 = document.getElementById('add10')
-    var count10 = 0
+    let btn10 = document.getElementById('btn10')
+    let add10 = document.getElementById('add10')
+    let count10 = 0
 
     function create10() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `
 
         <div class="common">Earthy & Woody 543  <input type="checkbox"></div>
@@ -1383,12 +1383,12 @@ var btn1 = document.getElementById('btn1')
     btn10.addEventListener('click', create10)
 
 
-    var btn11 = document.getElementById('btn11')
-    var add11 = document.getElementById('add11')
-    var count11 = 0
+    let btn11 = document.getElementById('btn11')
+    let add11 = document.getElementById('add11')
+    let count11 = 0
 
     function create11() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div > <input type="search" id="inputsearch" placeholder="Search"></div>
         <div class="common">Liquid 823 <input type="checkbox"></div>
         <div class="common">Spray 628 <input type="checkbox"></div>
@@ -1413,12 +1413,12 @@ var btn1 = document.getElementById('btn1')
     btn11.addEventListener('click', create11)
 
 
-    var btn12 = document.getElementById('btn12')
-    var add12 = document.getElementById('add12')
-    var count12 = 0
+    let btn12 = document.getElementById('btn12')
+    let add12 = document.getElementById('add12')
+    let count12 = 0
 
     function create12() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `
 
         <div class="common"Oily 543  <input type="checkbox"></div>
@@ -1440,12 +1440,12 @@ var btn1 = document.getElementById('btn1')
     }
     btn12.addEventListener('click', create12)
 
-    var btn13 = document.getElementById('btn13')
-    var add13 = document.getElementById('add13')
-    var count13 = 0
+    let btn13 = document.getElementById('btn13')
+    let add13 = document.getElementById('add13')
+    let count13 = 0
 
     function create13() {
-        var div = document.createElement('div')
+        let div = document.createElement('div')
         div.innerHTML = `<div > <input type="search" id="inputsearch" placeholder="Search"></div>
         <div class="common">Dryness 823 <input type="checkbox"></div>
         <div class="common">Acne/Blemishes 628 <input type="checkbox"></div>
@@ -1475,15 +1475,15 @@ var btn1 = document.getElementById('btn1')
 //popup right ------------------------------------------
 
 
-var openmodelbutt=document.querySelectorAll('[data-model-target]');
+let openmodelbutt=document.querySelectorAll('[data-model-target]');
 
-  var closemodelbutt=document.querySelectorAll('[data-close]');
-  var closemodelbutt1=document.querySelectorAll('[data-done]');
-  var overlay=document.getElementById("overlay");
+  let closemodelbutt=document.querySelectorAll('[data-close]');
+  let closemodelbutt1=document.querySelectorAll('[data-done]');
+  let overlay=document.getElementById("overlay");
 
   openmodelbutt.forEach(button => {
       button.addEventListener('click', () =>{
-          var model=document.querySelector(button.dataset.modelTarget)
+          let model=document.querySelector(button.dataset.modelTarget)
           openModel(model);
       })
 
@@ -1491,7 +1491,7 @@ var openmodelbutt=document.querySelectorAll('[data-model-target]');
 
  
   overlay.addEventListener('click',() => {
-      var models=document.querySelectorAll('.model.active');
+      let models=document.querySelectorAll('.model.active');
       models.forEach(model =>{
           closeModel(model);
       })
@@ -1500,14 +1500,14 @@ var openmodelbutt=document.querySelectorAll('[data-model-target]');
 
   closemodelbutt.forEach(button => {
       button.addEventListener('click', () =>{
-          var model=button.closest('.model')
+          let model=button.closest('.model')
           closeModel(model);
       })
 
   })
   closemodelbutt1.forEach(button => {
       button.addEventListener('click', () =>{
-          var model=button.closest('.model')
+          let model=button.closest('.model')
           closeModel(model);
       })
 
@@ -1533,15 +1533,15 @@ function  closeModel(model){
 
 
 
-var Middlediv=document.getElementById("Middle");
-var tablemiddle=document.getElementById("tablemiddle");
+let Middlediv=document.getElementById("Middle");
+let tablemiddle=document.getElementById("tablemiddle");
 
 
-var mainDivpop = document.createElement("div");
+let mainDivpop = document.createElement("div");
 mainDivpop.setAttribute("id", "containermainpop");
 Middlediv.append(mainDivpop);
 
-var mainDivtable = document.createElement("div");
+let mainDivtable = document.createElement("div");
 mainDivtable.setAttribute("id", "containermaintable");
 tablemiddle.append(mainDivtable);
 
@@ -1550,94 +1550,89 @@ const popupCart = (item) => {
   
   console.log("item:", item);
 
-    var imageDiv = document.createElement("div");
+    let imageDiv = document.createElement("div");
     imageDiv.setAttribute("id","popupheart");
- 
-    var imgappendpop = document.createElement("img");
+    let imgappendpop = document.createElement("img");
     imgappendpop.setAttribute("src", item.image_url);
     imgappendpop.setAttribute("id", "imgappendpop");
-
-    var p1pop = document.createElement("p");
+    let p1pop = document.createElement("p");
     p1pop.setAttribute("id","namepop")
     p1pop.textContent = item.product_name;
-
-    var span1pop = document.createElement("span");
+    let span1pop = document.createElement("span");
     span1pop.textContent =item.MRPcut;
     span1pop.setAttribute("id","span1pop")
-
-    var span2pop = document.createElement("span");
+    let span2pop = document.createElement("span");
     span2pop.textContent =" "+item.MRP;
     span2pop.setAttribute("id","span2pop")
-
     imageDiv.append(imgappendpop,p1pop,span1pop,span2pop);
     console.log("herer")
     
 
 //------table------------------------------------------------------
 
-    var tablediv = document.createElement("div");
+    let tablediv = document.createElement("div");
     tablediv.setAttribute("id","tablediv");
 
-   var table=document.createElement("table");
+   let table=document.createElement("table");
 
-   var thead=document.createElement("thead")
+   let thead=document.createElement("thead")
 
-   var tr=document.createElement("tr")
+   let tr=document.createElement("tr")
 
-   var th=document.createElement("th")
+   let th=document.createElement("th")
    th.textContent="Payment Details";
 
    tr.append(th);
    thead.append(tr);
 
-   var tbody=document.createElement("tbody");
+   let tbody=document.createElement("tbody");
 
-   var tr1=document.createElement("tr");
+   let tr1=document.createElement("tr");
 
-   var td1=document.createElement("td");
+   let td1=document.createElement("td");
    td1.textContent="Bag Total"
-   var td2=document.createElement("td");
+   let td2=document.createElement("td");
    td2.textContent=item.MRPcut1;
    tr1.append(td1,td2)
 
-  var tr2=document.createElement("tr");
+  let tr2=document.createElement("tr");
 
-  var td3=document.createElement("td");
+  let td3=document.createElement("td");
   td3.textContent="Bag Discount"
-  var td4=document.createElement("td");
+  let td4=document.createElement("td");
   td4.textContent="-"+item.totaldiscount;
   tr2.append(td3,td4)
 
-  var tr3=document.createElement("tr");
+  let tr3=document.createElement("tr");
 
-  var td5=document.createElement("td");
+  let td5=document.createElement("td");
   td5.textContent="Sub Total"
-  var td6=document.createElement("td");
+  let td6=document.createElement("td");
   td6.textContent=item.MRP;
   tr3.append(td5,td6)
 
 
-  var tr4=document.createElement("tr");
+  let tr4=document.createElement("tr");
 
-  var td7=document.createElement("td");
+  let td7=document.createElement("td");
   td7.textContent="Shipping Charge "
-  var td8=document.createElement("td");
+  let td8=document.createElement("td");
   td8.textContent="FREE";
   tr4.append(td7,td8)
 
-  var tr5=document.createElement("tr");
+  let tr5=document.createElement("tr");
 
-  var td9=document.createElement("td");
+  let td9=document.createElement("td");
   td9.textContent="Have a coupon ? "
-  var td10=document.createElement("td");
+  let td10=document.createElement("td");
   td10.textContent="View Coupons";
   tr5.append(td9,td10)
 
- var tr6=document.createElement("tr");
+ let tr6=document.createElement("tr");
 
-  var td11=document.createElement("td");
+  let td11=document.createElement("td");
   td11.textContent="Discount "
-  var td12=document.createElement("td");
+  let td12=document.createElement("td");
   td12.textContent=item.discount;
   tr6.append(td11,td12)
 
