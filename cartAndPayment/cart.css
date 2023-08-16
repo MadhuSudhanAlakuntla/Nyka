@@ -1,40 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-font-family: 'Inter', sans-serif;
-text-align: center;
-}
-img{
-    border-radius: 5px;
-}
 #cart-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    min-width: 90vw;
-    min-height: 85vh;
+    width: 400px;
+    height: 100%;
     border: solid whitesmoke;
-    border-radius: 10px;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-button:hover{
-    cursor: pointer;
-}
-#proceed{
-    color: ghostwhite;
-    border: 0;
-}
-#proceed:hover{
-    background-color: rgb(255, 3, 125);
-    color: white;
-}
-#items{
-    width: 90%;
+    float: right;
+    overflow: scroll;
 }
 #items>.item,#tp{
-    border: 2px solid  rgb(212, 212, 194);
+    border: 1px solid  rgb(241, 241, 225);
     display: flex;
     width: 90%;
     border-radius: 10px;
