@@ -12,9 +12,7 @@ form.addEventListener("submit", function(event) {
     
         userData3.push(formObj);
         localStorage.setItem("user-data", JSON.stringify(userData3));
-        alert("add home page link")
-        // add link of home page in this in this 
-        // window.location.assign("");
+        window.location.assign('/index.html')
        
         
    
