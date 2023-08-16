@@ -32,7 +32,10 @@ function display(products){
         items.append(item);
         document.getElementById('total-cost').textContent = total(pds)
     })
-    if(products.length==0)items.innerText="Nothing to see here"
+    if(products.length==0){
+        items.innerText="Nothing to see here"
+        document.getElementById('total-cost').textContent = 0
+    }
 }
 display(pds);
 //getting total price
