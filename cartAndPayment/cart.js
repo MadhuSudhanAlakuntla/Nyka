@@ -1,31 +1,5 @@
-var products = [
-    {
-        img : 'https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/b/c/bc1607aPLUMX00000133_1507231.jpg',
-        name : 'Fair&lovely',
-        qty : 1,
-        price : 20000,
-    },
-    {
-        img : 'https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/b/c/bc1607aPLUMX00000133_1507231.jpg',
-        name : 'Fair&lovely',
-        qty : 2,
-        price : 20000,
-    },
-    {
-        img : 'https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/b/c/bc1607aPLUMX00000133_1507231.jpg',
-        name : 'Fair&lovely',
-        qty : 1,
-        price : 20000,
-    },
-    {
-        img : 'https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/b/c/bc1607aPLUMX00000133_1507231.jpg',
-        name : 'Fair&lovelydhjhgvksjfjkljfjks',
-        qty : 2,
-        price : 20000,
-    },
-    
-]
-// console.log(products);
+let products = JSON.parse(localStorage.getItem('cart-products')) || []
+
 var items = document.getElementById('items')
 function display(products){
     items.innerHTML = "";
@@ -43,7 +17,6 @@ function display(products){
         btn.addEventListener('click',function(event){
             event.preventDefault();
             products.splice(index,1);
-            // localStorage.setItem('cart-products',JSON.stringify(products));
             display(products)
         })
         img.src = products[index].img;
@@ -57,6 +30,8 @@ function display(products){
         item.append(img,div);
         items.append(item);
         document.getElementById('total-cost').textContent = total(products)
+        if(products.length==0)
+        document.getElementById('total-cost').textContent = 0
     })
 }
 display(products);
