@@ -5,15 +5,24 @@ img{
     border-radius: 5px;
 }
 #cart-container{
-    width: 90vw;
-    height: 100%;
+    padding: 25px;
+    min-width: 90vw;
+    min-height: 85vh;
     border: solid whitesmoke;
-    /* float: right; */
+    border-radius: 10px;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 button:hover{
     cursor: pointer;
+}
+#proceed{
+    color: ghostwhite;
+    border: 0;
+}
+#proceed:hover{
+    background-color: rgb(255, 3, 125);
+    color: white;
 }
 #items>.item,#tp{
     border: 2px solid  rgb(212, 212, 194);

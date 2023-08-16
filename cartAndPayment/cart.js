@@ -3,6 +3,7 @@ var pds = JSON.parse(localStorage.getItem('cart-products'))||[];
 var items = document.getElementById('items')
 function display(products){
     items.innerHTML = "";
+    document.getElementById('tp').style.display = 'block'
     document.getElementById('total-items').innerText = products.length;
     products.forEach(function(element,index){
         var item = document.createElement('div'); 
@@ -34,7 +35,7 @@ function display(products){
     })
     if(products.length==0){
         items.innerText="Nothing to see here"
-        document.getElementById('total-cost').textContent = 0
+        document.getElementById('tp').style.display = 'none'
     }
 }
 display(pds);
