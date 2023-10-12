@@ -16,7 +16,7 @@ Nykaa is a premier online beauty and wellness destination. Offering a comprehens
 
 ## Demo
 
-- [Live Demo](https://nykaa-clone.netlify.app)
+- [Live Demo](https://enolc-nykaa.netlify.app/)
 
 ## Features
 
