@@ -1,6 +1,6 @@
 # Nykaa - Your Beauty, Our Passion
 
-![Nykaa Logo](./Images/nykaa_logo.png)
+![Nykaa Logo](./assets/logo.png)
 
 ## Table of Contents
 
