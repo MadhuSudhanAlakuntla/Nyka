@@ -32,10 +32,9 @@ Nykaa is a premier online beauty and wellness destination. Offering a comprehens
 
 Screenshots showcasing Nykaa's elegant design across various devices are presented below:
 
-- [Desktop](./Images/Nykaa-Desktop.png)
-- [Laptop](./Images/Nykaa-Laptop.png)
-- [Tablet](./Images/Nykaa-Tablet.png)
-- [Mobile](./Images/Nykaa-Mobile.png)
+- [Desktop](./assets/home-PC.png)
+- [Tablet](./assets/home-Tablet.png)
+- [Mobile](./assets/home-Phone.png)
 
 ## Contributors
 
