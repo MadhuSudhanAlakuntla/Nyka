@@ -38,7 +38,7 @@ Screenshots showcasing Nykaa's elegant design across various devices are present
 
 ## Contributors
 
-Meet the talented individuals who contributed to building Nykaa:
+Meet the talented individuals who contributed to building this Nykaa clone:
 
 - Dipanshu Singh: [LinkedIn](https://www.linkedin.com/in/dipanshu-singh-645821153/) [Github](https://github.com/Dipanshu-Singh-Dev)
 - Sachin
