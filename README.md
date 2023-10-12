@@ -40,7 +40,7 @@ Screenshots showcasing Nykaa's elegant design across various devices are present
 
 Meet the talented individuals who contributed to building Nykaa:
 
-- Sarah Khanna: [LinkedIn](https://www.linkedin.com/in/sarah-khanna-12345678/) [Github](https://github.com/sarahkhanna)
-- Rahul Mehta: [LinkedIn](https://www.linkedin.com/in/rahul-mehta-87654321/) [Github](https://github.com/rahulmehta)
-- Priya Sharma: [LinkedIn](https://www.linkedin.com/in/priya-sharma-abcdef12/) [Github](https://github.com/priyasharma)
-- Aniket Patel: [LinkedIn](https://www.linkedin.com/in/aniket-patel-xyz123/) [Github](https://github.com/aniketpatel)
+- Dipanshu Singh: [LinkedIn](https://www.linkedin.com/in/dipanshu-singh-645821153/) [Github](https://github.com/Dipanshu-Singh-Dev)
+- Sachin
+- Madhu Sudhan
+- Ritesh
